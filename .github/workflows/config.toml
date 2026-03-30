@@ -1,8 +1,12 @@
-baseURL = "https://<your-username>.github.io/gifts1500-site/"
+
+baseURL = "https://megamind111.github.io/gifts1500-site/"
 languageCode = "en-us"
 title = "Gifts Under ₹1,500"
 theme = "PaperMod"
-paginate = 10
+
+[pagination]
+  pagerSize = 10
+
 [params]
   author = "Your Name"
   defaultTheme = "light"
