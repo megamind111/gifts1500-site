@@ -1,0 +1,10 @@
+```html name=layouts/shortcodes/productcard.html
+<div class="product-card" style="display:flex;flex-direction:column;gap:0.6rem;padding:1rem;border:1px solid var(--card-border-color,rgba(0,0,0,0.08));border-radius:14px;background:var(--card-bg,rgba(255,255,255,0.85));backdrop-filter:blur(6px);height:100%;">
+  <img src="{{ .Get "img" }}" alt="{{ .Get "title" }}" style="width:100%;border-radius:10px;object-fit:cover;">
+  <div>
+    <h3 style="margin:0 0 0.25rem 0;font-size:1.05rem;">{{ .Get "title" }}</h3>
+    <p style="margin:0;color:var(--secondary);">₹{{ .Get "price" | replaceRE \"[^0-9]\" \"\" | printf \"%s\" }}</p>
+    <p style="margin:0;color:var(--secondary);font-size:0.9rem;">⭐ {{ .Get "rating" }} • {{ .Get "reviews" }} reviews {{ if eq (.Get "prime") "true" }}• Prime{{ end }}</p>
+  </div>
+  <a href="{{ .Get "link" }}" target="_blank" rel="nofollow noopener sponsored" style="text-decoration:none;text-align:center;background:#111;color:#fff;padding:0.7rem;border-radius:10px;font-weight:700;">View on Amazon</a>
+</div>
