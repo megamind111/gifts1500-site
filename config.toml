@@ -1,0 +1,9 @@
+baseURL = "https://megamind111.github.io/gifts1500-site/"
+languageCode = "en-us"
+title = "Gifts Under ₹1,500"
+theme = "PaperMod"
+paginate = 10
+[params]
+  author = "Your Name"
+  defaultTheme = "light"
+  ShowReadingTime = true
